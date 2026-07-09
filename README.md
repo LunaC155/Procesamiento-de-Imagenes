@@ -108,13 +108,8 @@ procesador-imagenes/
 
 ## 👨‍💻 Autor y Reconocimientos
 
-**Desarrollado por:** [Tu Nombre]  
-**Institución:** Universidad Politécnica Estatal del Carchi  
+**Desarrollado por:** Cristopher Luna 
 
 Este proyecto fue desarrollado como una iniciativa para aplicar patrones de diseño de software y principios de arquitectura en el campo de la visión por computadora.
 
 ---
-
-## 📄 Licencia
-
-Este proyecto se distribuye bajo la Licencia MIT. Eres libre de utilizar, modificar y distribuir el código.
