@@ -1,0 +1,31 @@
+# Entornos virtuales
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Archivos de caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Datos e imágenes de prueba / resultados locales
+datos/imagenes_entrada/*
+!datos/imagenes_entrada/.gitkeep
+datos/resultados/*
+!datos/resultados/.gitkeep
+
+# Archivos de sistema y editores
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Entornos de variables y secretos (por si a futuro agregas uno)
+.env
+.env.local
+.env.*.local
+*.pem
