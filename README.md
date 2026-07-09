@@ -1,177 +1,120 @@
-¡Claro que sí\! Aquí tienes la documentación completa y profesional para tu proyecto.
-
-Este contenido está formateado en **Markdown**, que es el estándar de la industria para documentación de software (archivos `README.md`). Puedes copiar este texto, crear un archivo llamado **`README.md`** en la carpeta principal de tu proyecto y pegarlo allí.
-
------
-
 # 📸 Procesador de Imágenes - Studio Edition
 
-  
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![OpenCV](https://img.shields.io/badge/OpenCV-4.x-green.svg)
+![License](https://img.shields.io/badge/License-MIT-orange.svg)
 
-Una aplicación de escritorio avanzada para el procesamiento digital de imágenes, desarrollada en Python. Combina potentes algoritmos matemáticos con una interfaz gráfica moderna e interactiva, diseñada tanto para fines educativos como profesionales.
+Una aplicación de escritorio avanzada para el procesamiento digital de imágenes, desarrollada íntegramente en Python. Este proyecto combina potentes algoritmos matemáticos y de visión por computadora con una interfaz gráfica moderna e interactiva, diseñada para fines tanto educativos como profesionales.
 
------
+---
 
 ## 🚀 Características Principales
 
-Esta aplicación cubre el espectro completo de técnicas de visión por computadora:
+Esta aplicación cubre un amplio espectro de técnicas de visión artificial y procesamiento de imágenes, organizadas de la siguiente manera:
 
-### 1\. 🎨 Interfaz y Herramientas Interactivas
+### 1. 🎨 Interfaz y Herramientas Interactivas
+* **Diseño Moderno:** Interfaz de usuario basada en `ttkbootstrap` con tema oscuro ("Superhero") para una mejor ergonomía visual.
+* **Dibujo en Tiempo Real:** Previsualización dinámica de formas geométricas (Rectángulos, Círculos) mediante *Double Buffering*.
+* **Cursores Dinámicos:** Adaptación visual del cursor según la herramienta seleccionada (Lápiz, Relleno, Cruz, etc.).
+* **Historial Completo:** Sistema robusto de **Deshacer (Ctrl+Z)** y **Rehacer (Ctrl+Y)** sin límite prestablecido.
+* **Navegación Avanzada:** Funcionalidades de zoom y paneo optimizadas para la inspección detallada de imágenes grandes.
 
-  * **Diseño Moderno:** Interfaz basada en `ttkbootstrap` con tema oscuro ("Superhero") para reducir la fatiga visual.
-  * **Dibujo en Tiempo Real:** Previsualización dinámica de formas (Rectángulos, Círculos) antes de fijarlas (Double Buffering).
-  * **Cursores Dinámicos:** El icono del mouse cambia según la herramienta seleccionada (Lápiz, Bote de Pintura, Cruz, etc.).
-  * **Historial Completo:** Sistema de **Deshacer (Ctrl+Z)** y **Rehacer (Ctrl+Y)** ilimitado (hasta agotar memoria).
-  * **Zoom y Navegación:** Visualización optimizada de imágenes grandes.
+### 2. 🛠️ Filtros Espaciales y Morfológicos
+* **Suavizado y Reducción de Ruido:** Filtros Promedio, Gaussiano, de Mediana y Bilateral (suavizado que respeta los bordes).
+* **Realce:** Enfoque (Sharpen), Filtro de Paso Alto y Máscara de Desenfoque (Unsharp Mask).
+* **Detección de Bordes:** Canny, Sobel, Prewitt y Laplaciano.
+* **Morfología Matemática:** Operaciones de Erosión, Dilatación, Apertura, Cierre, Top Hat, Black Hat y Gradiente Morfológico.
 
-### 2\. 🛠️ Filtros Espaciales y Morfológicos
+### 3. 📊 Transformadas y Frecuencias
+* **Transformada de Fourier (FFT):** Análisis y visualización del espectro de magnitud de frecuencias.
+* **Transformada de Hough:** Detección automatizada de líneas rectas y circunferencias.
+* **Otras Transformadas:** Discreta del Coseno (DCT) y Walsh-Hadamard para el análisis de señales.
 
-  * **Suavizado:** Promedio, Gaussiano, Mediana (eliminación de ruido), Bilateral (suavizado que respeta bordes).
-  * **Realce:** Sharpen (enfoque), Filtro de Paso Alto, Unsharp Mask.
-  * **Detección de Bordes:** Canny (con pre-procesamiento gaussiano), Sobel, Prewitt, Laplaciano.
-  * **Morfología Matemática:** Erosión, Dilatación, Apertura, Cierre, Top Hat, Black Hat y Gradiente Morfológico.
-  * **Artísticos:** Filtros de convolución personalizados (Emboss/Relieve).
+### 4. 🌈 Procesamiento de Color
+* **Espacios de Color:** Conversión precisa a escala de grises (luminancia).
+* **Ajustes Manuales:** Control paramétrico de Brillo, Contraste y Saturación.
+* **Mejora Automática:** Ecualización de histograma para la corrección del contraste global.
 
-### 3\. 📊 Transformadas y Frecuencias
+### 5. ✂️ Segmentación y Geometría
+* **Umbralización:** Métodos adaptativos y algoritmo de Otsu para cálculo automático del umbral óptimo.
+* **Segmentación Avanzada:** Algoritmo *Watershed* y agrupamiento de color mediante *K-Means Clustering*.
+* **Transformaciones Geométricas:** Operaciones de rotación, escalado, traslación, volteo (H/V), sesgado (Shear) y corrección de perspectiva.
 
-  * **Fourier (FFT):** Visualización del espectro de magnitud de frecuencias.
-  * **Hough:** Detección automática de **Líneas Rectas** y **Círculos**.
-  * **Coseno (DCT):** Transformada discreta del coseno.
-  * **Walsh-Hadamard:** Transformada para análisis de señales.
+### 6. 📉 Análisis y Compresión
+* **Simulación JPEG:** Entorno de pruebas para la visualización de artefactos de compresión con pérdida.
+* **Métricas de Calidad:** Cálculo instantáneo de **MSE** (Error Cuadrático Medio) y **PSNR** (Relación Señal-Ruido) respecto a la imagen original.
+* **Análisis Estadístico:** Generación y visualización de histogramas de intensidad (RGB y Grises).
 
-### 4\. 🌈 Procesamiento de Color
+---
 
-  * **Conversión:** Escala de Grises (Luminancia).
-  * **Ajustes:** Brillo, Contraste y Saturación controlados por usuario.
-  * **Ecualización:** Mejora automática del contraste global mediante histograma.
+## 💻 Requisitos del Sistema e Instalación
 
-### 5\. ✂️ Segmentación y Geometría
+* **Sistema Operativo:** Compatible con Windows, macOS y Linux.
+* **Intérprete:** Python 3.8 o superior.
 
-  * **Umbralización:** Otsu (automático) y Adaptativo (para iluminación irregular).
-  * **Avanzada:** Algoritmo Watershed (cuencas hidrográficas) y K-Means Clustering (agrupamiento por color).
-  * **Geometría:** Rotación, Escalado, Traslación, Volteo (Flip H/V), Sesgado (Shear) y corrección de Perspectiva.
+### Instalación Rápida
 
-### 6\. 📉 Compresión y Análisis
+1. **Clonar el repositorio**
+   ```bash
+   git clone https://github.com/TuUsuario/procesador-imagenes.git
+   cd procesador-imagenes
+   ```
 
-  * **Simulación JPEG:** Visualización de artefactos de compresión con pérdida.
-  * **Métricas:** Cálculo de **MSE** (Error Cuadrático Medio) y **PSNR** (Relación Señal-Ruido) comparando con la original.
-  * **Histogramas:** Visualización gráfica de la distribución de intensidad (RGB y Grises).
+2. **Crear y activar un entorno virtual (Recomendado)**
+   ```bash
+   # En Windows
+   python -m venv venv
+   .\venv\Scripts\activate
 
------
+   # En macOS/Linux
+   python -m venv venv
+   source venv/bin/activate
+   ```
 
-## 💻 Requisitos del Sistema
+3. **Instalar dependencias**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-  * **Sistema Operativo:** Windows, macOS o Linux.
-  * **Python:** Versión 3.8 o superior.
+4. **Ejecutar la aplicación**
+   ```bash
+   python main.py
+   ```
 
-### Librerías Necesarias
+---
 
-El proyecto depende de las siguientes bibliotecas de Python:
+## 📂 Arquitectura del Proyecto
 
-  * `opencv-python` (Procesamiento de imágenes)
-  * `numpy` (Cálculos matriciales)
-  * `matplotlib` (Gráficos e histogramas)
-  * `scipy` (Cálculos científicos)
-  * `Pillow` (Manejo de imágenes para GUI)
-  * `ttkbootstrap` (Estilos modernos para Tkinter)
-
------
-
-## ⚙️ Instalación y Ejecución
-
-### 1\. Clonar o Descargar
-
-Descarga el código fuente en tu equipo local.
-
-### 2\. Configurar Entorno Virtual (Recomendado)
-
-```bash
-python -m venv venv
-# Windows
-.\venv\Scripts\activate
-# Mac/Linux
-source venv/bin/activate
-```
-
-### 3\. Instalar Dependencias
-
-Ejecuta el siguiente comando en la terminal dentro de la carpeta del proyecto:
-
-```bash
-pip install -r requirements.txt
-```
-
-*(Si no tienes el archivo requirements.txt, usa: `pip install opencv-python numpy matplotlib scipy Pillow ttkbootstrap`)*
-
-### 4\. Ejecutar la Aplicación
-
-```bash
-python main.py
-```
-
------
-
-## 📖 Guía de Uso Rápida
-
-### Panel Lateral (Izquierda)
-
-Contiene las herramientas de uso frecuente divididas en pestañas:
-
-1.  **🎨 Dibujo:** Selecciona herramientas como Lápiz, Rectángulo, Círculo, Texto o Relleno (Flood Fill). Usa el selector de color para cambiar el tinte.
-2.  **⚡ Ajustes:** Accesos rápidos a filtros comunes (Grises, Canny, Gaussiano) y botones de **Deshacer/Rehacer**.
-3.  **ℹ️ Info:** Muestra las dimensiones, canales y ruta de la imagen actual.
-
-### Barra de Menú (Superior)
-
-Acceso a la funcionalidad completa y algoritmos avanzados (Transformadas, Segmentación compleja, Compresión, etc.).
-
-### Atajos de Teclado
-
-  * **Ctrl + Z:** Deshacer última acción.
-  * **Ctrl + Y:** Rehacer acción.
-
------
-
-## 📂 Estructura del Proyecto
+El proyecto sigue principios de diseño modular para facilitar su mantenimiento y escalabilidad:
 
 ```text
-proyecto_procesamiento_imagenes/
-│
+procesador-imagenes/
 ├── main.py                     # Punto de entrada de la aplicación
-├── interfaz_grafica.py         # Lógica de GUI, Eventos de Mouse y Menús
-├── requirements.txt            # Lista de dependencias
-│
-├── configuracion/              # Ajustes globales
-│   ├── configuracion.py        # Rutas y parámetros generales
-│   └── estilos.py              # Definición de temas, fuentes y colores
-│
-├── modulos/                    # Núcleo de procesamiento
-│   ├── filtros/                # Suavizado, Bordes, Morfología, Realce
-│   ├── transformadas/          # Fourier, Hough, DCT, Walsh
-│   ├── color/                  # Conversión, Ajustes, Histograma
-│   ├── geometricas/            # Rotación, Escala, Shear, Perspectiva
-│   ├── segmentacion/           # Canny, Otsu, Watershed, K-Means
-│   ├── compresion/             # JPEG Lossy, Métricas
-│   └── utilidades/             # I/O, Métricas, Dibujo, Visualización
-│
-└── datos/                      # Carpeta para almacenamiento temporal
-    ├── imagenes_entrada/
-    └── resultados/
+├── interfaz_grafica.py         # Lógica de la GUI, eventos y menús
+├── requirements.txt            # Dependencias del proyecto
+├── configuracion/              # Ajustes globales y estilos visuales
+├── modulos/                    # Núcleo de procesamiento de imágenes
+│   ├── filtros/                # Operaciones espaciales y morfológicas
+│   ├── transformadas/          # Procesamiento en el dominio de la frecuencia
+│   ├── color/                  # Ajustes y conversiones de espacios de color
+│   ├── geometricas/            # Transformaciones espaciales
+│   ├── segmentacion/           # Detección y agrupación de píxeles
+│   ├── compresion/             # Algoritmos de pérdida y métricas
+│   └── utilidades/             # Herramientas de E/S, dibujo y visualización
+└── datos/                      # Almacenamiento local (imágenes de prueba)
 ```
 
------
+---
 
-## 👨‍💻 Autor y Créditos
+## 👨‍💻 Autor y Reconocimientos
 
-**Desarrollado por:** [Tu Nombre]
-**Institución:** Universidad Politécnica Estatal del Carchi
+**Desarrollado por:** [Tu Nombre]  
+**Institución:** Universidad Politécnica Estatal del Carchi  
 
-Este proyecto fue desarrollado siguiendo principios de arquitectura modular y patrones de diseño de software para garantizar su escalabilidad y mantenimiento.
+Este proyecto fue desarrollado como una iniciativa para aplicar patrones de diseño de software y principios de arquitectura en el campo de la visión por computadora.
 
------
+---
 
 ## 📄 Licencia
 
-Este proyecto está bajo la Licencia MIT - eres libre de usarlo, modificarlo y distribuirlo.
-
-Por cierto, para desbloquear la funcionalidad completa de todas las aplicaciones, habilita la [actividad en las aplicaciones de Gemini](https://myactivity.google.com/product/gemini).
+Este proyecto se distribuye bajo la Licencia MIT. Eres libre de utilizar, modificar y distribuir el código.
